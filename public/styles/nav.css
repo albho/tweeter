@@ -1,6 +1,5 @@
-/* Navbar */
 nav {
-  height: 80px; /* compass asks for 120px */
+  height: 80px;
   width: 100vw;
   background-color: #4056a1;
   color: #ffffff;
@@ -8,6 +7,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 1;
 }
 
 nav #logo {

@@ -1,0 +1,25 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa200;
+  background-image: url("https://www.transparenttextures.com/patterns/light-honeycomb-dark.png");
+  position: relative;
+}
+
+header div:nth-child(1) {
+  position: absolute;
+  margin-top: 1em;
+}
+
+header div:nth-child(2) {
+  position: relative;
+  margin-top: auto;
+}
+
+header div:nth-child(2) h2 {
+  margin: 1rem;
+}
