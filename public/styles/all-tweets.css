@@ -44,3 +44,22 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+#all-tweets article footer i {
+  color: #4056a1;
+  margin-right: 5px;
+}
+
+#all-tweets article footer i:last-child {
+  margin-right: 15px;
+}
+
+/* hover */
+#all-tweets article:hover {
+  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
+}
+
+#all-tweets article footer i:hover {
+  cursor: pointer;
+  color: green;
+}
