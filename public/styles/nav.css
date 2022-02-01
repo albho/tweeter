@@ -11,24 +11,24 @@ nav {
   z-index: 1;
 }
 
-nav #logo {
+nav > span#logo {
   font-family: "Bungee", cursive;
 }
 
-nav span {
+nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav span p {
+nav > div > p {
   margin: 0;
 }
 
-nav span b {
+nav > div > p > b {
   font-weight: 600;
 }
 
-nav span i {
+nav > div > i {
   color: #ff0000;
 }
