@@ -1,65 +1,91 @@
-#all-tweets article {
+main#main-container > section#all-tweets > article {
   margin: 2rem;
   border: 3px solid #545149;
   padding: 0 15px 10px;
 }
 
-.user-info {
+main#main-container > section#all-tweets > article > header > div.user-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.user-info div {
+main#main-container
+  > section#all-tweets
+  > article
+  > header
+  > div.user-info
+  > div {
   display: flex;
   align-items: center;
 }
 
-.user-info div i {
+main#main-container
+  > section#all-tweets
+  > article
+  > header
+  > div.user-info
+  > div
+  > i {
   margin-right: 10px;
 }
 
-.user-info .handle {
+main#main-container
+  > section#all-tweets
+  > article
+  > header
+  > div.user-info
+  > p.handle {
   font-weight: 600;
   font-size: smaller;
   color: rgba(84, 81, 73, 0.5);
 }
 
-#all-tweets article .content p {
+main#main-container > section#all-tweets > article > header > div.content {
+  border-bottom: 3px solid #545149;
+}
+
+main#main-container > section#all-tweets > article > header > div.content p {
   font-weight: 600;
   font-size: smaller;
 }
 
-#all-tweets article .content {
-  border-bottom: 3px solid #545149;
-}
-
-#all-tweets article footer {
+main#main-container > section#all-tweets > article > footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#all-tweets article footer p {
+main#main-container > section#all-tweets > article > footer > p {
   font-size: 1rem;
   font-weight: 600;
 }
 
-#all-tweets article footer i {
+main#main-container > section#all-tweets > article > footer > div.icons > i {
   color: #4056a1;
   margin-right: 5px;
 }
 
-#all-tweets article footer i:last-child {
+main#main-container
+  > section#all-tweets
+  > article
+  > footer
+  > div.icons
+  > i:last-child {
   margin-right: 15px;
 }
 
 /* hover */
-#all-tweets article:hover {
+main#main-container > section#all-tweets > article:hover {
   box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
 }
 
-#all-tweets article footer i:hover {
+main#main-container
+  > section#all-tweets
+  > article
+  > footer
+  > div.icons
+  > i:hover {
   cursor: pointer;
   color: green;
 }
