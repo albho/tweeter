@@ -5,7 +5,6 @@
  */
 
 $(() => {
-  console.log("hi");
   const data = [
     {
       user: {
@@ -32,9 +31,6 @@ $(() => {
   ];
 
   const renderTweets = function (tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     for (const tweet in tweets) {
       const newTweet = createTweetElement(tweets[tweet]);
       $("#all-tweets").append(newTweet);
@@ -42,23 +38,25 @@ $(() => {
   };
 
   const createTweetElement = function (tweet) {
+    const { user, content, created_at } = tweet;
+
     let $tweet = `<article>
       <header>
         <div class="user-info">
           <div>
-            <img src='${tweet.user.avatars}' alt='user avatar'>
-            <p>${tweet.user.name}</p>
+            <img src='${user.avatars}' alt='user avatar'>
+            <p>${user.name}</p>
           </div>
-          <p class="handle">${tweet.user.handle}</p>
+          <p class="handle">${user.handle}</p>
         </div>
         <div class="content">
           <p>
-            ${tweet.content.text}
+            ${content.text}
           </p>
         </div>
       </header>
       <footer>
-        <p>${timeago.format(tweet.created_at)}</p>
+        <p>${timeago.format(created_at)}</p>
         <div class="icons">
           <i class="fa-solid fa-flag fa-xs"></i>
           <i class="fa-solid fa-retweet fa-xs"></i>
