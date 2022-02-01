@@ -8,6 +8,7 @@ main#main-container > section#all-tweets > article > header > div.user-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 main#main-container
@@ -26,7 +27,7 @@ main#main-container
   > header
   > div.user-info
   > div
-  > i {
+  > img {
   margin-right: 10px;
 }
 
