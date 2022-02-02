@@ -16,30 +16,32 @@ $(() => {
   const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
-    let $tweet = `<article>
-      <header>
-        <div class="user-info">
-          <div>
-            <img src='${escape(user.avatars)}' alt='user avatar'>
-            <p>${escape(user.name)}</p>
+    let $tweet = `
+      <article>
+        <header>
+          <div class="user-info">
+            <div>
+              <img src='${escape(user.avatars)}' alt='user avatar'>
+              <p>${escape(user.name)}</p>
+            </div>
+            <p class="handle">${escape(user.handle)}</p>
           </div>
-          <p class="handle">${escape(user.handle)}</p>
-        </div>
-        <div class="content">
-          <p>
-            ${escape(content.text)}
-          </p>
-        </div>
-      </header>
-      <footer>
-        <p>${timeago.format(created_at)}</p>
-        <div class="icons">
-          <i class="fa-solid fa-flag fa-xs"></i>
-          <i class="fa-solid fa-retweet fa-xs"></i>
-          <i class="fa-solid fa-heart fa-xs"></i>
-        </div>
-      </footer>
-    </article>`;
+          <div class="content">
+            <p>
+              ${escape(content.text)}
+            </p>
+          </div>
+        </header>
+        <footer>
+          <p>${timeago.format(created_at)}</p>
+          <div class="icons">
+            <i class="fa-solid fa-flag fa-xs"></i>
+            <i class="fa-solid fa-retweet fa-xs"></i>
+            <i class="fa-solid fa-heart fa-xs"></i>
+          </div>
+        </footer>
+      </article>
+    `;
 
     return $tweet;
   };
