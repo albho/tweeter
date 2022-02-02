@@ -31,8 +31,21 @@ body {
   font-weight: 300;
 }
 
-main#main-container {
+#main-container {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
 }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  #main-container {
+    margin-top: 9vh;
+  }
+}
+
+/* @media only screen and (min-width: 1024px) {
+} */
