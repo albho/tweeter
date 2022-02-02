@@ -1,110 +1,65 @@
-main#main-container > section#tweets-container > article {
+article {
   margin: 2rem;
   border: 3px solid #545149;
   padding: 0 15px 10px;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.user-info {
+article:hover {
+  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
+}
+
+.user-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.user-info
-  > div {
+.user-info div {
   display: flex;
   align-items: center;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.user-info
-  > div
-  > img {
+.user-info img {
   margin-right: 10px;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.user-info
-  > p.handle {
+.handle {
   font-weight: 600;
   font-size: smaller;
   color: rgba(84, 81, 73, 0.5);
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.content {
+.content {
   border-bottom: 3px solid #545149;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > header
-  > div.content
-  p {
+.content p {
   font-weight: 600;
   font-size: smaller;
 }
 
-main#main-container > section#tweets-container > article > footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main#main-container > section#tweets-container > article > footer > p {
+footer p {
   font-size: 1rem;
   font-weight: 600;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > footer
-  > div.icons
-  > i {
+.icons i {
   color: #4056a1;
   margin-right: 5px;
 }
 
-main#main-container
-  > section#tweets-container
-  > article
-  > footer
-  > div.icons
-  > i:last-child {
+.icons i:last-child {
   margin-right: 15px;
 }
 
-/* hover */
-main#main-container > section#tweets-container > article:hover {
-  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
-}
-
-main#main-container
-  > section#tweets-container
-  > article
-  > footer
-  > div.icons
-  > i:hover {
+.icons i:hover {
   cursor: pointer;
   color: green;
 }
