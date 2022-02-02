@@ -12,10 +12,18 @@ $(() => {
 
     // order (most recent at the top) & render tweets
     tweets.reverse();
+
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
       $("#tweets-container").append(newTweet);
     }
+  };
+
+  // prevent XSS
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   const createTweetElement = tweet => {
@@ -25,14 +33,14 @@ $(() => {
       <header>
         <div class="user-info">
           <div>
-            <img src='${user.avatars}' alt='user avatar'>
-            <p>${user.name}</p>
+            <img src='${escape(user.avatars)}' alt='user avatar'>
+            <p>${escape(user.name)}</p>
           </div>
-          <p class="handle">${user.handle}</p>
+          <p class="handle">${escape(user.handle)}</p>
         </div>
         <div class="content">
           <p>
-            ${content.text}
+            ${escape(content.text)}
           </p>
         </div>
       </header>
