@@ -50,7 +50,7 @@ $(() => {
   const renderTweets = tweets => {
     // clear input field & all tweets, clear and hide error message
     $("#tweets-container").html("");
-    $("textarea#tweet-text").val("");
+    $("#tweet-text").val("");
 
     // order (most recent at the top) & render tweets
     tweets.reverse();
@@ -68,16 +68,16 @@ $(() => {
   };
 
   const renderErrMsg = msg => {
-    $("div#error-message").text(msg).slideDown(200);
+    $("#error-message").text(msg).slideDown(200);
   };
 
   // send data to server via ajax
   $("form").submit(function (e) {
     e.preventDefault();
-    $("div#error-message").text("").slideUp(200);
+    $("#error-message").text("").slideUp(200);
 
     // error handling
-    const tweetLength = $("textarea#tweet-text").val().length;
+    const tweetLength = $("#tweet-text").val().length;
     if (!tweetLength) {
       return renderErrMsg("Tweet cannot be empty.");
     }
