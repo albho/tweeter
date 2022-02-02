@@ -48,8 +48,19 @@ $(() => {
     e.preventDefault();
 
     const form = $(this);
-    const actionUrl = form.attr("action");
 
+    // error handling
+    const tweetLength = $("textarea#tweet-text").val().length;
+    if (!tweetLength) {
+      return alert("Tweet cannot be empty.");
+    }
+
+    if (tweetLength > 140) {
+      return alert("Tweet cannot exceed 140 characters.");
+    }
+
+    // send tweet to server
+    const actionUrl = form.attr("action");
     $.ajax({
       type: "POST",
       url: actionUrl,
