@@ -52,7 +52,6 @@ $(() => {
 
     // order (most recent at the top) & render tweets
     tweets.reverse();
-    console.log("ok");
 
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
@@ -94,7 +93,7 @@ $(() => {
       data: form.serialize(),
       success: null,
       dataType: "json",
-    }).done(function () {
+    }).always(() => {
       loadTweets();
     });
   });
