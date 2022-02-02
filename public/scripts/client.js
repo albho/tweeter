@@ -5,27 +5,14 @@
  */
 
 $(() => {
-  const renderTweets = tweets => {
-    // clear input field & all tweets
-    $("#tweets-container").html("");
-    $("textarea#tweet-text").val("");
-
-    // order (most recent at the top) & render tweets
-    tweets.reverse();
-
-    for (const tweet of tweets) {
-      const newTweet = createTweetElement(tweet);
-      $("#tweets-container").append(newTweet);
-    }
-  };
-
-  // prevent XSS
+  // helper function to prevent XSS
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // create template string with tweet obj
   const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
@@ -57,6 +44,28 @@ $(() => {
     return $tweet;
   };
 
+  // append templated tweet to page
+  const renderTweets = tweets => {
+    // clear input field & all tweets
+    $("#tweets-container").html("");
+    $("textarea#tweet-text").val("");
+
+    // order (most recent at the top) & render tweets
+    tweets.reverse();
+
+    for (const tweet of tweets) {
+      const newTweet = createTweetElement(tweet);
+      $("#tweets-container").append(newTweet);
+    }
+  };
+
+  // get tweets from server
+  const loadTweets = () => {
+    $.ajax("/tweets", { method: "GET" }).then(data => {
+      renderTweets(data);
+    });
+  };
+
   // send data to server via ajax
   $("form").submit(function (e) {
     e.preventDefault();
@@ -81,13 +90,6 @@ $(() => {
       dataType: "json",
     }).done(loadTweets());
   });
-
-  // get data from server via ajax
-  const loadTweets = () => {
-    $.ajax("/tweets", { method: "GET" }).then(data => {
-      renderTweets(data);
-    });
-  };
 
   loadTweets();
 });
