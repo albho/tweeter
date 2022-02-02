@@ -52,7 +52,6 @@ $(() => {
 
     // order (most recent at the top) & render tweets
     tweets.reverse();
-
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
       $("#tweets-container").append(newTweet);
