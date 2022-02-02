@@ -38,7 +38,6 @@ nav button {
   background: transparent;
   border: none;
   position: absolute;
-  transform: translate(-50%, 0);
 }
 
 nav button:hover {
@@ -46,11 +45,12 @@ nav button:hover {
   animation: SlideUpDown 1s linear infinite;
 }
 
-nav button i {
+nav button i.fa-angle-double-down {
   color: #ff0000;
 }
 
 nav button i.fa-angle-double-up {
+  color: #ff0000;
   display: none;
 }
 
