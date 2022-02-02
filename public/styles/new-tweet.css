@@ -1,5 +1,6 @@
 main#main-container > section#new-tweet {
   margin: 0 2rem;
+  display: none;
 }
 
 main#main-container > section#new-tweet > h2 {
