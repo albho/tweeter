@@ -72,8 +72,9 @@ $(() => {
   };
 
   // send data to server via ajax
-  $("form").submit(function (e) {
+  $("form").submit(e => {
     e.preventDefault();
+
     $("#error-message").text("").slideUp(200);
 
     // error handling
@@ -89,11 +90,10 @@ $(() => {
     }
 
     // send tweet to server
-    const form = $(this);
     $.ajax({
-      type: "POST",
-      url: form.attr("action"),
-      data: form.serialize(),
+      method: "POST",
+      url: $("form").attr("action"),
+      data: $("form").serialize(),
       success: null,
       dataType: "json",
     }).always(() => {
