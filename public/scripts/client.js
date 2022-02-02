@@ -62,7 +62,7 @@ $(() => {
 
   // get tweets from server
   const loadTweets = () => {
-    $.ajax("/tweets", { method: "GET" }).then(data => {
+    $.ajax({ method: "GET", url: "/tweets" }).then(data => {
       renderTweets(data);
     });
   };
@@ -94,10 +94,7 @@ $(() => {
       method: "POST",
       url: $("form").attr("action"),
       data: $("form").serialize(),
-      success: null,
-      dataType: "json",
-    }).always(() => {
-      loadTweets();
+      success: () => loadTweets(),
     });
   });
 
