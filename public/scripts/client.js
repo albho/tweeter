@@ -82,7 +82,9 @@ $(() => {
     }
 
     if (tweetLength > 140) {
-      return renderErrMsg("Tweet cannot exceed 140 characters.");
+      return renderErrMsg(
+        `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`
+      );
     }
 
     // send tweet to server
