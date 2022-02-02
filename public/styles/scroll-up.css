@@ -1,4 +1,4 @@
-button#scroll-up {
+#scroll-up {
   position: fixed;
   display: none;
   bottom: 25px;
@@ -9,7 +9,7 @@ button#scroll-up {
   color: #f4f1ec;
 }
 
-button#scroll-up:hover {
+#scroll-up:hover {
   cursor: pointer;
   background: #dd0000;
 }
