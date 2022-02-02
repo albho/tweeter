@@ -2,6 +2,18 @@ main#main-container > section#new-tweet {
   margin: 0 2rem;
 }
 
+main#main-container > section#new-tweet > h2 {
+  margin-bottom: 15px;
+}
+
+main#main-container > section#new-tweet > div#error-message {
+  background: lightpink;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
 main#main-container > section#new-tweet > form {
   display: flex;
   flex-direction: column;

@@ -46,12 +46,13 @@ $(() => {
 
   // append templated tweet to page
   const renderTweets = tweets => {
-    // clear input field & all tweets
+    // clear input field & all tweets, clear and hide error message
     $("#tweets-container").html("");
     $("textarea#tweet-text").val("");
 
     // order (most recent at the top) & render tweets
     tweets.reverse();
+    console.log("ok");
 
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
@@ -66,18 +67,23 @@ $(() => {
     });
   };
 
+  const renderErrMsg = msg => {
+    $("div#error-message").text(msg).slideDown(200);
+  };
+
   // send data to server via ajax
   $("form").submit(function (e) {
     e.preventDefault();
+    $("div#error-message").text("").slideUp(200);
 
     // error handling
     const tweetLength = $("textarea#tweet-text").val().length;
     if (!tweetLength) {
-      return alert("Tweet cannot be empty.");
+      return renderErrMsg("Tweet cannot be empty.");
     }
 
     if (tweetLength > 140) {
-      return alert("Tweet cannot exceed 140 characters.");
+      return renderErrMsg("Tweet cannot exceed 140 characters.");
     }
 
     // send tweet to server
@@ -88,7 +94,9 @@ $(() => {
       data: form.serialize(),
       success: null,
       dataType: "json",
-    }).done(loadTweets());
+    }).done(function () {
+      loadTweets();
+    });
   });
 
   loadTweets();
