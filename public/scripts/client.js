@@ -5,14 +5,14 @@
  */
 
 $(() => {
-  const renderTweets = function (tweets) {
+  const renderTweets = tweets => {
     for (const tweet in tweets) {
       const newTweet = createTweetElement(tweets[tweet]);
       $("#tweets-container").append(newTweet);
     }
   };
 
-  const createTweetElement = function (tweet) {
+  const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
     let $tweet = `<article>
@@ -43,6 +43,7 @@ $(() => {
     return $tweet;
   };
 
+  // send data to server via ajax
   $("form").submit(function (e) {
     e.preventDefault();
 
@@ -56,8 +57,9 @@ $(() => {
     });
   });
 
-  const loadTweets = function () {
-    $.ajax("/tweets", { method: "GET" }).then(function (data) {
+  // get data from server via ajax
+  const loadTweets = () => {
+    $.ajax("/tweets", { method: "GET" }).then(data => {
       renderTweets(data);
     });
   };
