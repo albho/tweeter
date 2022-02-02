@@ -11,46 +11,46 @@ nav {
   z-index: 1;
 }
 
-nav > span#logo {
+#logo {
   font-family: "Bungee", cursive;
   align-self: center;
 }
 
-nav > div {
+nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav > div > p {
+nav p {
   margin: 1rem 0 0;
 }
 
-nav > div > p > b {
+nav p b {
   font-weight: 600;
 }
 
-nav > div > div {
+nav div div {
   position: relative;
 }
 
-nav > div > div > button {
+nav button {
   background: transparent;
   border: none;
   position: absolute;
   transform: translate(-50%, 0);
 }
 
-nav > div > div > button:hover {
+nav button:hover {
   cursor: pointer;
   animation: SlideUpDown 1s linear infinite;
 }
 
-nav > div > div > button > i {
+nav button i {
   color: #ff0000;
 }
 
-nav > div > div > button > i.fa-angle-double-up {
+nav button i.fa-angle-double-up {
   display: none;
 }
 

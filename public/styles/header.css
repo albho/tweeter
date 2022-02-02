@@ -1,4 +1,4 @@
-header#main-header {
+#main-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -10,16 +10,16 @@ header#main-header {
   position: relative;
 }
 
-header#main-header div:nth-child(1) {
+#main-header div:nth-child(1) {
   position: absolute;
   margin-top: 1em;
 }
 
-header#main-header div:nth-child(2) {
+#main-header div:nth-child(2) {
   position: relative;
   margin-top: auto;
 }
 
-header#main-header div:nth-child(2) h2 {
+#main-header div:nth-child(2) h2 {
   margin: 1rem;
 }
