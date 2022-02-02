@@ -6,8 +6,14 @@
 
 $(() => {
   const renderTweets = tweets => {
-    for (const tweet in tweets) {
-      const newTweet = createTweetElement(tweets[tweet]);
+    // clear input field & all tweets
+    $("#tweets-container").html("");
+    $("textarea#tweet-text").val("");
+
+    // order (most recent at the top) & render tweets
+    tweets.reverse();
+    for (const tweet of tweets) {
+      const newTweet = createTweetElement(tweet);
       $("#tweets-container").append(newTweet);
     }
   };
@@ -47,8 +53,6 @@ $(() => {
   $("form").submit(function (e) {
     e.preventDefault();
 
-    const form = $(this);
-
     // error handling
     const tweetLength = $("textarea#tweet-text").val().length;
     if (!tweetLength) {
@@ -60,12 +64,14 @@ $(() => {
     }
 
     // send tweet to server
-    const actionUrl = form.attr("action");
+    const form = $(this);
     $.ajax({
       type: "POST",
-      url: actionUrl,
+      url: form.attr("action"),
       data: form.serialize(),
-    });
+      success: null,
+      dataType: "json",
+    }).done(loadTweets());
   });
 
   // get data from server via ajax
