@@ -29,6 +29,12 @@ body {
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
+  min-width: 480px;
+}
+
+#page-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #main-container {
@@ -37,15 +43,36 @@ body {
   background-color: inherit;
 }
 
-@media only screen and (min-width: 1024px) {
-  body {
+@media only screen and (min-width: 768px) {
+  #page-container {
     display: flex;
   }
 
+  nav {
+    background-color: #4056a1;
+  }
+
+  #main-header {
+    margin: 10vh 2vw 0;
+  }
+
   #main-container {
-    margin-top: 9vh;
+    margin-top: 8vh;
   }
 }
 
-/* @media only screen and (min-width: 1024px) {
-} */
+@media only screen and (min-width: 1024px) {
+  #main-header {
+    width: 500px;
+  }
+
+  #tweets-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  article {
+    margin: 0;
+  }
+}

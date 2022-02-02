@@ -1,7 +1,11 @@
+#tweets-container {
+  margin-top: 1rem;
+}
+
 article {
-  margin: 2rem;
   border: 3px solid #545149;
   padding: 0 15px 10px;
+  margin: 1rem 2vw 0 0;
 }
 
 article:hover {
