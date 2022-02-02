@@ -48,12 +48,14 @@ $(() => {
 
   // append templated tweet to page
   const renderTweets = tweets => {
-    // clear input field & all tweets, clear and hide error message
-    $("#tweets-container").empty();
-    $("#tweet-text").val("");
-
-    // order (most recent at the top) & render tweets
+    // order (most recent at the top)
     tweets.reverse();
+
+    // clear input field & all tweets, clear and hide error message
+    $("#tweet-text").val("");
+    $("#tweets-container").empty();
+
+    // render tweets
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
       $("#tweets-container").append(newTweet);
