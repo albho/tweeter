@@ -1,13 +1,13 @@
-main#main-container > section#new-tweet {
+#new-tweet {
   margin: 0 2rem;
   display: none;
 }
 
-main#main-container > section#new-tweet > h2 {
+#new-tweet h2 {
   margin-bottom: 15px;
 }
 
-main#main-container > section#new-tweet > div#error-message {
+#error-message {
   background: lightpink;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -15,12 +15,12 @@ main#main-container > section#new-tweet > div#error-message {
   display: none;
 }
 
-main#main-container > section#new-tweet > form {
+form {
   display: flex;
   flex-direction: column;
 }
 
-main#main-container > section#new-tweet > form > textarea#tweet-text {
+#tweet-text {
   background-color: inherit;
   border: none;
   outline: none;
@@ -28,7 +28,7 @@ main#main-container > section#new-tweet > form > textarea#tweet-text {
   padding: 0.5rem;
 }
 
-main#main-container > section#new-tweet > form > div {
+form div {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0.5rem 0 0;
@@ -36,7 +36,7 @@ main#main-container > section#new-tweet > form > div {
   font-size: smaller;
 }
 
-main#main-container > section#new-tweet > form > div > button {
+form div button {
   background-color: #4056a1;
   font-size: smaller;
   color: #ffffff;
@@ -45,7 +45,7 @@ main#main-container > section#new-tweet > form > div > button {
   border-radius: 3px;
 }
 
-main#main-container > section#new-tweet > form > div > button:hover {
+form div button:hover {
   cursor: pointer;
   background-color: #304691;
 }
