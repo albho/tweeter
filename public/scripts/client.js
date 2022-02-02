@@ -49,7 +49,7 @@ $(() => {
   // append templated tweet to page
   const renderTweets = tweets => {
     // clear input field & all tweets, clear and hide error message
-    $("#tweets-container").html("");
+    $("#tweets-container").empty();
     $("#tweet-text").val("");
 
     // order (most recent at the top) & render tweets
