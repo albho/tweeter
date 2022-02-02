@@ -11,7 +11,7 @@ $(() => {
     // show and focus text field
     $("section#new-tweet").slideDown();
     $("textarea#tweet-text").focus();
-    $("i.fa-angle-double-up").css("display", "block");
+    $("#nav-toggle > i.fa-angle-double-up").css("display", "block");
     $("i.fa-angle-double-down").css("display", "none");
   });
 

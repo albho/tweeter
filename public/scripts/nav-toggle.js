@@ -4,14 +4,14 @@ $(() => {
       // show and focus text field, toggle button arrow direction
       $("section#new-tweet").slideDown();
       $("textarea#tweet-text").focus();
-      $("i.fa-angle-double-up").css("display", "block");
+      $("#nav-toggle > i.fa-angle-double-up").css("display", "block");
       $("i.fa-angle-double-down").css("display", "none");
     } else {
       // hide and blur text field, toggle button arrow direction
       $("section#new-tweet").slideUp();
       $("textarea#tweet-text").blur();
       $("i.fa-angle-double-down").css("display", "block");
-      $("i.fa-angle-double-up").css("display", "none");
+      $("#nav-toggle > i.fa-angle-double-up").css("display", "none");
     }
   });
 });
