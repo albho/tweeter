@@ -13,6 +13,7 @@ nav {
 nav #logo {
   font-family: "Bungee", cursive;
   align-self: center;
+  text-shadow: 2px 2px #111;
 }
 nav div {
   display: flex;
@@ -21,6 +22,7 @@ nav div {
 }
 nav p {
   margin: 0.8rem 0 0;
+  text-shadow: 2px 2px #111;
 }
 nav p b {
   font-weight: 600;

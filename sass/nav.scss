@@ -15,6 +15,7 @@ nav {
   #logo {
     font-family: $secondary-font;
     align-self: center;
+    text-shadow: 2px 2px #111;
   }
 
   div {
@@ -25,6 +26,7 @@ nav {
 
   p {
     margin: 0.8rem 0 0;
+    text-shadow: 2px 2px #111;
     b {
       font-weight: 600;
     }
