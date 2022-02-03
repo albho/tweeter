@@ -2,15 +2,33 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
-
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+1. Install dependencies using the `npm install` command.
+2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Go to <http://localhost:8080/> in your browser.
+
+**Stack**: HTML, CSS, JS, SASS, jQuery, AJAX, Node, Express
+
+## Notable Features
+
+- **Fully Responsive**
+  - Mobile first design
+  - Mobile, tablet, and desktop views
+- **DOM Manipulation**
+  - Tweet input field toggles dynamically with animations
+  - Button to help user easily scroll back up
+  - Display tweets in reverse chronological order with time submitted
+- **Error handling**
+  - Dynamically updating character count
+  - Displays error message for invalid tweets
+  - Button disables briefly after 'tweet' submission to prevent double submission
+- **Security**
+  - Basic XSS protection
+
+## Notes
+
+- Data is not persistent
 
 ## Dependencies
 
