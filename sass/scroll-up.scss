@@ -1,0 +1,15 @@
+#scroll-up {
+  position: fixed;
+  display: none;
+  bottom: 25px;
+  right: 25px;
+  padding: 15px;
+  border-radius: 50%;
+  background: red;
+  color: #f4f1ec;
+}
+
+#scroll-up:hover {
+  cursor: pointer;
+  background: #dd0000;
+}
