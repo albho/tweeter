@@ -2,8 +2,8 @@ nav {
   height: 5rem;
   width: 100vw;
   background-color: transparent;
-  color: #f4f1ec;
-  padding: 0 1.5rem;
+  color: #fff;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   position: fixed;
