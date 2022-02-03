@@ -6,7 +6,7 @@ $(() => {
     $(this)
       .parent()
       .children("div")
-      .children("output.counter")
+      .children("#char-counter")
       .text(counter)
       .css("color", textColor);
 

@@ -51,8 +51,9 @@ $(() => {
     // order (most recent at the top)
     tweets.reverse();
 
-    // clear input field & all tweets, clear and hide error message
+    // clear input field & all tweets, reset counter, clear and hide error message
     $("#tweet-text").val("");
+    $("#char-counter").text(140);
     $("#tweets-container").empty();
 
     // render tweets
