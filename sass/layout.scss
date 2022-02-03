@@ -1,3 +1,5 @@
+@import "./base.scss";
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -17,8 +19,8 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $primary-dark;
+  background-color: $background-light;
   font-size: 24px;
 }
 
@@ -49,7 +51,7 @@ body {
   }
 
   nav {
-    background-color: #4056a1;
+    background-color: $primary-blue;
   }
 
   #main-header {
