@@ -1,51 +1,51 @@
 #new-tweet {
   margin: 0 2rem;
   display: none;
-}
 
-#new-tweet h2 {
-  margin-bottom: 15px;
-}
+  h2 {
+    margin-bottom: 15px;
+  }
 
-#error-message {
-  background: lightpink;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  display: none;
-}
+  #error-message {
+    background: lightpink;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+  form {
+    display: flex;
+    flex-direction: column;
 
-#tweet-text {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  border-bottom: 3px solid #545149;
-  padding: 0.5rem;
-}
+    #tweet-text {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      border-bottom: 3px solid #545149;
+      padding: 0.5rem;
+    }
 
-form div {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem 0.5rem 0 0;
-  font-family: "Bungee", cursive;
-  font-size: smaller;
-}
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0.5rem 0 0;
+      font-family: "Bungee", cursive;
+      font-size: smaller;
 
-form div button {
-  background-color: #4056a1;
-  font-size: smaller;
-  color: #ffffff;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 3px;
-}
+      button {
+        background-color: #4056a1;
+        font-size: smaller;
+        color: #ffffff;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 3px;
+      }
 
-form div button:hover {
-  cursor: pointer;
-  background-color: #304691;
+      button:hover {
+        cursor: pointer;
+        background-color: #304691;
+      }
+    }
+  }
 }
