@@ -1,69 +1,56 @@
 #tweets-container {
   margin-top: 1rem;
 }
-
-article {
+#tweets-container article {
   border: 3px solid #545149;
   padding: 0 15px 10px;
   margin: 1rem 2vw 0 0;
 }
-
-article:hover {
-  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
-}
-
-.user-info {
+#tweets-container article .user-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
 }
-
-.user-info div {
+#tweets-container article .user-info div {
   display: flex;
   align-items: center;
 }
-
-.user-info img {
+#tweets-container article .user-info img {
   margin-right: 10px;
 }
-
-.handle {
+#tweets-container article .user-info .handle {
   font-weight: 600;
   font-size: smaller;
   color: rgba(84, 81, 73, 0.5);
 }
-
-.content {
+#tweets-container article .content {
   border-bottom: 3px solid #545149;
 }
-
-.content p {
+#tweets-container article .content p {
   font-weight: 600;
   font-size: smaller;
 }
-
-footer {
+#tweets-container article footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-footer p {
+#tweets-container article footer p {
   font-size: 1rem;
   font-weight: 600;
 }
-
-.icons i {
+#tweets-container article footer .icons i {
   color: #4056a1;
   margin-right: 5px;
 }
-
-.icons i:last-child {
+#tweets-container article footer .icons i:last-child {
   margin-right: 15px;
 }
-
-.icons i:hover {
+#tweets-container article footer .icons i:hover {
   cursor: pointer;
   color: green;
+}
+#tweets-container article:hover {
+  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
 }

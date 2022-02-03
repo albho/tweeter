@@ -1,69 +1,71 @@
 #tweets-container {
   margin-top: 1rem;
-}
 
-article {
-  border: 3px solid #545149;
-  padding: 0 15px 10px;
-  margin: 1rem 2vw 0 0;
-}
+  article {
+    border: 3px solid #545149;
+    padding: 0 15px 10px;
+    margin: 1rem 2vw 0 0;
 
-article:hover {
-  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
-}
+    .user-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
 
-.user-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+      div {
+        display: flex;
+        align-items: center;
+      }
 
-.user-info div {
-  display: flex;
-  align-items: center;
-}
+      img {
+        margin-right: 10px;
+      }
 
-.user-info img {
-  margin-right: 10px;
-}
+      .handle {
+        font-weight: 600;
+        font-size: smaller;
+        color: rgba(84, 81, 73, 0.5);
+      }
+    }
 
-.handle {
-  font-weight: 600;
-  font-size: smaller;
-  color: rgba(84, 81, 73, 0.5);
-}
+    .content {
+      border-bottom: 3px solid #545149;
 
-.content {
-  border-bottom: 3px solid #545149;
-}
+      p {
+        font-weight: 600;
+        font-size: smaller;
+      }
+    }
 
-.content p {
-  font-weight: 600;
-  font-size: smaller;
-}
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+      p {
+        font-size: 1rem;
+        font-weight: 600;
+      }
 
-footer p {
-  font-size: 1rem;
-  font-weight: 600;
-}
+      .icons {
+        i {
+          color: #4056a1;
+          margin-right: 5px;
+        }
 
-.icons i {
-  color: #4056a1;
-  margin-right: 5px;
-}
+        i:last-child {
+          margin-right: 15px;
+        }
 
-.icons i:last-child {
-  margin-right: 15px;
-}
+        i:hover {
+          cursor: pointer;
+          color: green;
+        }
+      }
+    }
+  }
 
-.icons i:hover {
-  cursor: pointer;
-  color: green;
+  article:hover {
+    box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
+  }
 }
