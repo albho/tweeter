@@ -51,10 +51,11 @@ $(() => {
     // order (most recent at the top)
     tweets.reverse();
 
-    // clear input field & all tweets, reset counter, clear and hide error message
     $("#tweet-text").val("");
     $("#char-counter").text(140);
     $("#tweets-container").empty();
+    $("form button").prop("disabled", false);
+    $("form button").text("Tweet");
 
     // render tweets
     for (const tweet of tweets) {
@@ -79,6 +80,8 @@ $(() => {
     e.preventDefault();
 
     $("#error-message").text("").slideUp(200);
+    $("form button").prop("disabled", true);
+    $("form button").text("Tweeting...");
 
     // error handling
     const tweetLength = $("#tweet-text").val().length;

@@ -2,6 +2,7 @@ $(() => {
   $("#tweet-text").on("input", function () {
     const counter = 140 - $(this).val().length;
     const textColor = counter >= 0 ? "inherit" : "red";
+    $("form button").prop("disabled", false);
 
     $(this)
       .parent()
