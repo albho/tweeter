@@ -22,6 +22,7 @@
   outline: none;
   border-bottom: 0.2rem solid #545149;
   padding: 0.5rem;
+  font-weight: 600;
 }
 #new-tweet form div {
   display: flex;
