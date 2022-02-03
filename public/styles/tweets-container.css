@@ -1,10 +1,10 @@
 #tweets-container {
-  margin-top: 1rem;
+  margin: 1rem 1rem 0 0;
 }
 #tweets-container article {
   border: 0.3rem solid #545149;
   padding: 0 1rem;
-  margin: 1rem 2vw 0 0;
+  margin: 0 0 1rem 0;
 }
 #tweets-container article .user-info {
   display: flex;

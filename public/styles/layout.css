@@ -43,16 +43,17 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  #page-container {
-    display: flex;
-  }
-
   nav {
     background-color: #4056a1;
   }
 
+  #page-container {
+    display: flex;
+    padding: 1rem;
+  }
+
   #main-header {
-    margin: 6rem 2vw 0;
+    margin: 6rem 1rem 0;
   }
 
   #main-container {
@@ -68,9 +69,5 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-  }
-
-  article {
-    margin: 0 2vw 0 0;
   }
 }
