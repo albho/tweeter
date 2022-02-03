@@ -3,11 +3,11 @@
   display: none;
 }
 #new-tweet h2 {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 #new-tweet #error-message {
   background: lightpink;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   display: none;
@@ -20,7 +20,7 @@
   background-color: inherit;
   border: none;
   outline: none;
-  border-bottom: 3px solid #545149;
+  border-bottom: 0.2rem solid #545149;
   padding: 0.5rem;
 }
 #new-tweet form div {
@@ -35,8 +35,8 @@
   font-size: smaller;
   color: #f4f1ec;
   border: none;
-  padding: 4px 8px;
-  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
 }
 #new-tweet form div button:hover {
   cursor: pointer;

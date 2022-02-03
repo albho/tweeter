@@ -2,8 +2,8 @@
   margin-top: 1rem;
 }
 #tweets-container article {
-  border: 3px solid #545149;
-  padding: 0 15px 10px;
+  border: 0.3rem solid #545149;
+  padding: 0 1rem;
   margin: 1rem 2vw 0 0;
 }
 #tweets-container article .user-info {
@@ -17,7 +17,7 @@
   align-items: center;
 }
 #tweets-container article .user-info img {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 #tweets-container article .user-info .handle {
   font-weight: 600;
@@ -25,7 +25,7 @@
   color: #545149;
 }
 #tweets-container article .content {
-  border-bottom: 3px solid #545149;
+  border-bottom: 0.3rem solid #545149;
 }
 #tweets-container article .content p {
   font-weight: 600;
@@ -42,15 +42,15 @@
 }
 #tweets-container article footer .icons i {
   color: #4056a1;
-  margin-right: 5px;
+  margin-right: 0.3rem;
 }
 #tweets-container article footer .icons i:last-child {
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 #tweets-container article footer .icons i:hover {
   cursor: pointer;
   color: #005500;
 }
 #tweets-container article:hover {
-  box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
+  box-shadow: 0.3rem 0.3rem rgba(84, 81, 73, 0.5);
 }

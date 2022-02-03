@@ -4,8 +4,8 @@
   margin-top: 1rem;
 
   article {
-    border: 3px solid $primary-dark;
-    padding: 0 15px 10px;
+    border: 0.3rem solid $primary-dark;
+    padding: 0 1rem;
     margin: 1rem 2vw 0 0;
 
     .user-info {
@@ -20,7 +20,7 @@
       }
 
       img {
-        margin-right: 10px;
+        margin-right: 1rem;
       }
 
       .handle {
@@ -31,7 +31,7 @@
     }
 
     .content {
-      border-bottom: 3px solid $primary-dark;
+      border-bottom: 0.3rem solid $primary-dark;
 
       p {
         font-weight: 600;
@@ -52,11 +52,11 @@
       .icons {
         i {
           color: $primary-blue;
-          margin-right: 5px;
+          margin-right: 0.3rem;
         }
 
         i:last-child {
-          margin-right: 15px;
+          margin-right: 1rem;
         }
 
         i:hover {
@@ -68,6 +68,6 @@
   }
 
   article:hover {
-    box-shadow: 5px 5px $article-box-shadow;
+    box-shadow: 0.3rem 0.3rem $article-box-shadow;
   }
 }

@@ -1,5 +1,5 @@
 #main-header {
-  height: 400px;
+  height: 25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 #main-header div:nth-child(1) {
   position: absolute;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 #main-header div:nth-child(2) {
   position: relative;
