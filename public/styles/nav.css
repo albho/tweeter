@@ -10,50 +10,41 @@ nav {
   z-index: 1;
   min-width: 480px;
 }
-
-#logo {
+nav #logo {
   font-family: "Bungee", cursive;
   align-self: center;
 }
-
 nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 nav p {
   margin: 0.8rem 0 0;
 }
-
 nav p b {
   font-weight: 600;
 }
-
 nav div div {
   position: relative;
   margin-top: 0.8rem;
 }
-
 nav button {
   background: transparent;
   border: none;
   position: absolute;
 }
-
-nav button:hover {
-  cursor: pointer;
-  animation: SlideUpDown 1s linear infinite;
-}
-
 nav button i.fa-angle-double-down {
   color: #ff0000;
   display: block;
 }
-
 nav button i.fa-angle-double-up {
   color: #ff0000;
   display: none;
+}
+nav button:hover {
+  cursor: pointer;
+  animation: SlideUpDown 1s linear infinite;
 }
 
 @keyframes SlideUpDown {

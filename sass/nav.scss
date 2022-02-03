@@ -9,51 +9,50 @@ nav {
   position: fixed;
   z-index: 1;
   min-width: 480px;
-}
 
-#logo {
-  font-family: "Bungee", cursive;
-  align-self: center;
-}
+  #logo {
+    font-family: "Bungee", cursive;
+    align-self: center;
+  }
 
-nav div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-nav p {
-  margin: 0.8rem 0 0;
-}
+  p {
+    margin: 0.8rem 0 0;
+    b {
+      font-weight: 600;
+    }
+  }
 
-nav p b {
-  font-weight: 600;
-}
+  div div {
+    position: relative;
+    margin-top: 0.8rem;
+  }
 
-nav div div {
-  position: relative;
-  margin-top: 0.8rem;
-}
+  button {
+    background: transparent;
+    border: none;
+    position: absolute;
 
-nav button {
-  background: transparent;
-  border: none;
-  position: absolute;
-}
+    i.fa-angle-double-down {
+      color: #ff0000;
+      display: block;
+    }
 
-nav button:hover {
-  cursor: pointer;
-  animation: SlideUpDown 1s linear infinite;
-}
+    i.fa-angle-double-up {
+      color: #ff0000;
+      display: none;
+    }
+  }
 
-nav button i.fa-angle-double-down {
-  color: #ff0000;
-  display: block;
-}
-
-nav button i.fa-angle-double-up {
-  color: #ff0000;
-  display: none;
+  button:hover {
+    cursor: pointer;
+    animation: SlideUpDown 1s linear infinite;
+  }
 }
 
 @keyframes SlideUpDown {
