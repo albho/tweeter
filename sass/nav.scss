@@ -58,11 +58,11 @@ nav {
   button:hover {
     cursor: pointer;
 
-    animation: SlideUpDown 1.2s linear infinite;
+    animation: verticalSlide 1.2s linear infinite;
   }
 }
 
-@keyframes SlideUpDown {
+@keyframes verticalSlide {
   0%,
   100% {
     top: 0;
