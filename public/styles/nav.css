@@ -2,7 +2,7 @@ nav {
   height: 5rem;
   width: 100vw;
   background-color: transparent;
-  color: #ffffff;
+  color: #f4f1ec;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
@@ -41,6 +41,9 @@ nav button i.fa-angle-double-down {
 nav button i.fa-angle-double-up {
   color: #ff0000;
   display: none;
+}
+nav button i.fa-angle-double-up:hover {
+  color: #dd0000;
 }
 nav button:hover {
   cursor: pointer;

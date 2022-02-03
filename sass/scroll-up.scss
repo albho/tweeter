@@ -1,3 +1,5 @@
+@import "./base.scss";
+
 #scroll-up {
   position: fixed;
   display: none;
@@ -5,11 +7,11 @@
   right: 25px;
   padding: 15px;
   border-radius: 50%;
-  background: red;
-  color: #f4f1ec;
+  background: $toggle-btn;
+  color: $primary-light;
 }
 
 #scroll-up:hover {
   cursor: pointer;
-  background: #dd0000;
+  background: $toggle-btn-hover;
 }

@@ -22,7 +22,7 @@
 #tweets-container article .user-info .handle {
   font-weight: 600;
   font-size: smaller;
-  color: rgba(84, 81, 73, 0.5);
+  color: #545149;
 }
 #tweets-container article .content {
   border-bottom: 3px solid #545149;
@@ -49,7 +49,7 @@
 }
 #tweets-container article footer .icons i:hover {
   cursor: pointer;
-  color: green;
+  color: #005500;
 }
 #tweets-container article:hover {
   box-shadow: 5px 5px rgba(84, 81, 73, 0.5);
