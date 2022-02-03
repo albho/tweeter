@@ -1,11 +1,18 @@
+$primary-font: "Source Sans Pro", sans-serif;
+$secondary-font: "Bungee", cursive;
+
 $primary-blue: #4056a1;
 $primary-dark: #545149;
 $primary-light: #f4f1ec;
 $tweet-icon-hover: #005500;
 $toggle-btn: #ff0000;
 $toggle-btn-hover: #dd0000;
-$error-msg: lightpink;
+$error-msg: #e6b4aa;
 $article-box-shadow: rgba(84, 81, 73, 0.5);
 
-$primary-font: "Source Sans Pro", sans-serif;
-$secondary-font: "Bungee", cursive;
+@mixin center-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
