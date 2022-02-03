@@ -12,7 +12,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 0.25rem;
 
       div {
         display: flex;
@@ -21,12 +21,14 @@
 
       img {
         margin-right: 1rem;
+        width: 3rem;
       }
 
       .handle {
         font-weight: 600;
         font-size: smaller;
         color: $primary-dark;
+        opacity: 0.5;
       }
     }
 

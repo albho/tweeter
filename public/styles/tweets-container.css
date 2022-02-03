@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
 }
 #tweets-container article .user-info div {
   display: flex;
@@ -18,11 +18,13 @@
 }
 #tweets-container article .user-info img {
   margin-right: 1rem;
+  width: 3rem;
 }
 #tweets-container article .user-info .handle {
   font-weight: 600;
   font-size: smaller;
   color: #545149;
+  opacity: 0.5;
 }
 #tweets-container article .content {
   border-bottom: 0.3rem solid #545149;
