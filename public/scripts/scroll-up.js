@@ -15,12 +15,19 @@ $(() => {
     $("i.fa-angle-double-down").css("display", "none");
   });
 
-  // toggle scroll up button based on page position
-  $(document).scroll(function () {
-    if ($(this).scrollTop() < 200) {
+  // toggle scroll up button visibility based on page position
+  $(document).scroll(() => {
+    const $displayProperty = $("#scroll-up").css("display");
+    const $documentPosition = $(document).scrollTop();
+
+    if ($documentPosition < 200 && $displayProperty === "block") {
       $("#scroll-up").fadeOut();
-    } else {
+      return;
+    }
+
+    if ($documentPosition >= 200 && $displayProperty === "none") {
       $("#scroll-up").fadeIn();
+      return;
     }
   });
 });
