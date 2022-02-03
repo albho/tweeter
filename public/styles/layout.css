@@ -52,11 +52,11 @@ body {
   }
 
   #main-header {
-    margin: 10vh 2vw 0;
+    margin: 6rem 2vw 0;
   }
 
   #main-container {
-    margin-top: 8vh;
+    margin-top: 5rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -71,6 +71,6 @@ body {
   }
 
   article {
-    margin: 0;
+    margin: 0 2vw 0 0;
   }
 }

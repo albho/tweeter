@@ -1,5 +1,5 @@
 nav {
-  height: 8vh;
+  height: 5rem;
   width: 100vw;
   background-color: transparent;
   color: #ffffff;
@@ -57,8 +57,7 @@ nav button i.fa-angle-double-up {
 }
 
 @keyframes SlideUpDown {
-  0%,
-  100% {
+  0%, 100% {
     top: 0;
   }
   50% {
