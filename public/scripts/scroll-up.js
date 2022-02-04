@@ -22,18 +22,18 @@
 
   // toggle scroll button visibility based on page position
   function onScroll() {
-    const $documentPosition = $(document).scrollTop();
+    const $documentPosition = $(this).scrollTop();
     const $scrollBtn = $(".scroll-up");
     const $btnIsDisplayed =
       $scrollBtn.css("display") === "block" ? true : false;
 
     if ($documentPosition < 200 && $btnIsDisplayed) {
-      $(".scroll-up").fadeOut();
+      $scrollBtn.fadeOut();
       return;
     }
 
     if ($documentPosition >= 200 && !$btnIsDisplayed) {
-      $(".scroll-up").fadeIn();
+      $scrollBtn.fadeIn();
       return;
     }
   }
