@@ -11,23 +11,24 @@
     });
   };
 
-  // clear input + page, reset counter and enable button
+  // clear input field and all tweets, reset character counter, enable submit button
   const resetElements = () => {
     $("#tweet-text").val("");
     $(".tweets-container").empty();
     $(".char-counter").text(140);
     $("form button").text("Tweet").prop("disabled", false);
+    return;
   };
 
-  // append templated tweet to page
+  // prepend templated tweet to page (reverse chronological)
   const renderTweets = tweets => {
-    tweets.forEach(tweet => {
+    return tweets.forEach(tweet => {
       const newTweet = createTweetElement(tweet);
       $(".tweets-container").prepend(newTweet);
     });
   };
 
-  // create template string with tweet obj
+  // create string with tweet object
   const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
@@ -61,20 +62,27 @@
     return $tweet;
   };
 
+  // helper function to prevent XSS attacks
+  const escapeInput = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // send data to server via ajax
   $("form").submit(e => {
     e.preventDefault();
 
-    // error handling
+    // error handling for invalid tweet lengths
     const tweetLength = $("#tweet-text").val().length;
     if (!tweetLength) {
-      return renderErrMsg("Tweet cannot be empty.");
+      const errorMsg = "Tweet cannot be empty.";
+      return $(".error-message").text(errorMsg).slideDown(200);
     }
 
     if (tweetLength > 140) {
-      return renderErrMsg(
-        `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`
-      );
+      const errorMsg = `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`;
+      return $(".error-message").text(errorMsg).slideDown(200);
     }
 
     // ensure error message is hidden, indicate that tweet is submitting
@@ -83,17 +91,6 @@
 
     // send tweet to server
     const $data = $("form").serialize();
-    $.post("/tweets", $data).then(() => loadTweets());
+    return $.post("/tweets", $data).then(() => loadTweets());
   });
-
-  // helper function to prevent XSS
-  const escapeInput = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
-  const renderErrMsg = msg => {
-    $(".error-message").text(msg).slideDown(200);
-  };
 })(jQuery);
