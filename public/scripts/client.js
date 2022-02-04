@@ -86,7 +86,7 @@
     }
 
     if (tweetLength > 140) {
-      const msg = `Tweet cannot exceed 140 characters. You currently have ${$tweetLength} characters.`;
+      const msg = `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`;
       return errorMsg.text(msg).slideDown(200);
     }
 
