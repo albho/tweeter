@@ -1,17 +1,26 @@
-$(() => {
-  $(".nav-toggle").click(() => {
-    if ($(".new-tweet").css("display") === "none") {
+(function ($) {
+  $(() => {
+    $(".nav-toggle").on("click", onClick);
+  });
+
+  function onClick() {
+    const $composeSection = $(".new-tweet");
+    const $downArrow = $("i.fa-angle-double-down");
+    const $upArrow = $(".nav-toggle i.fa-angle-double-up");
+    const $input = $("#tweet-text");
+
+    if ($composeSection.css("display") === "none") {
       // show and focus text field, toggle button arrow direction
-      $(".new-tweet").slideDown();
-      $("#tweet-text").focus();
-      $(".nav-toggle i.fa-angle-double-up").css("display", "block");
-      $("i.fa-angle-double-down").css("display", "none");
+      $composeSection.slideDown();
+      $input.focus();
+      $upArrow.css("display", "block");
+      $downArrow.css("display", "none");
     } else {
       // hide and blur text field, toggle button arrow direction
-      $(".new-tweet").slideUp();
-      $("#tweet-text").blur();
-      $("i.fa-angle-double-down").css("display", "block");
-      $(".nav-toggle i.fa-angle-double-up").css("display", "none");
+      $composeSection.slideUp();
+      $input.blur();
+      $downArrow.css("display", "block");
+      $upArrow.css("display", "none");
     }
-  });
-});
+  }
+})(jQuery);
