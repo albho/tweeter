@@ -1,6 +1,7 @@
 (function ($) {
   $(() => {
     loadTweets();
+    $("form").on("submit", onSubmit);
   });
 
   // get tweets from server
@@ -32,7 +33,7 @@
   const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
-    let tweet = `
+    let newTweet = `
     <article>
       <header>
         <div class="user-info">
@@ -59,7 +60,7 @@
     </article>
   `;
 
-    return tweet;
+    return newTweet;
   };
 
   // helper function to prevent XSS attacks
@@ -70,27 +71,33 @@
   };
 
   // send data to server via ajax
-  $("form").submit(e => {
-    e.preventDefault();
+
+  function onSubmit(event) {
+    event.preventDefault();
+
+    const $form = $(this);
+    const formContainer = $form.closest(".new-tweet");
+    const errorMsg = formContainer.find(".error-message");
+    const tweetLength = $form.find("#tweet-text").val().length;
 
     // error handling for invalid tweet lengths
-    const $tweetLength = $("#tweet-text").val().length;
-    if (!$tweetLength) {
-      const errorMsg = "Tweet cannot be empty.";
-      return $(".error-message").text(errorMsg).slideDown(200);
+    if (!tweetLength) {
+      const msg = "Tweet cannot be empty.";
+      return errorMsg.text(msg).slideDown(200);
     }
 
-    if ($tweetLength > 140) {
-      const errorMsg = `Tweet cannot exceed 140 characters. You currently have ${$tweetLength} characters.`;
-      return $(".error-message").text(errorMsg).slideDown(200);
+    if (tweetLength > 140) {
+      const msg = `Tweet cannot exceed 140 characters. You currently have ${$tweetLength} characters.`;
+      return errorMsg.text(msg).slideDown(200);
     }
 
     // ensure error message is hidden, indicate that tweet is submitting
-    $(".error-message").text("").slideUp(200);
-    $("form button").text("Tweeting...").prop("disabled", true);
+    errorMsg.text("").slideUp(200);
+    const submitBtn = $form.find("button");
+    submitBtn.text("Tweeting...").prop("disabled", true);
 
-    // send tweet to server
-    const $data = $("form").serialize();
-    return $.post("/tweets", $data).then(() => loadTweets());
-  });
+    // send tweet to server, re-load tweets when finished
+    const data = $form.serialize();
+    return $.post("/tweets", data).then(() => loadTweets());
+  }
 })(jQuery);
