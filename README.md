@@ -17,13 +17,12 @@ Tweeter is a simple, single-page Twitter clone.
 - **Fully Responsive**
   - Mobile first design
 - **DOM Manipulation**
-  - Input field toggles dynamically with animations
-  - Button to help user easily scroll back up
-  - Display tweets in reverse chronological order
+  - Compose tweet field can be toggled to show or hide
+  - On page scroll, a button appears to help user easily scroll back up
 - **Error handling**
-  - Dynamically updating character count
-  - Displays error message for invalid tweets
-  - Button disables briefly after 'tweet' submission to prevent double submission
+  - On input, character count dynamically updates
+  - Display an error message if user attempts to submit an invalid tweet
+  - Submit button disables briefly after 'tweet' submission to prevent double submission
 - **Security**
   - Basic XSS protection
 
