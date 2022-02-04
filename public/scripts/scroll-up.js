@@ -1,6 +1,11 @@
-$(() => {
-  // scroll back up with animation
-  $(".scroll-up").on("click", () => {
+(function ($) {
+  $(() => {
+    $(".scroll-up").on("click", onClick);
+    $(document).on("scroll", onScroll);
+  });
+
+  function onClick() {
+    // scroll up with animation
     $("html").animate(
       {
         scrollTop: 0,
@@ -13,21 +18,23 @@ $(() => {
     $("#tweet-text").focus();
     $(".nav-toggle > i.fa-angle-double-up").css("display", "block");
     $("i.fa-angle-double-down").css("display", "none");
-  });
+  }
 
-  // toggle scroll up button visibility based on page position
-  $(document).scroll(() => {
-    const $displayProperty = $(".scroll-up").css("display");
+  // toggle scroll button visibility based on page position
+  function onScroll() {
     const $documentPosition = $(document).scrollTop();
+    const $scrollBtn = $(".scroll-up");
+    const $btnIsDisplayed =
+      $scrollBtn.css("display") === "block" ? true : false;
 
-    if ($documentPosition < 200 && $displayProperty === "block") {
+    if ($documentPosition < 200 && $btnIsDisplayed) {
       $(".scroll-up").fadeOut();
       return;
     }
 
-    if ($documentPosition >= 200 && $displayProperty === "none") {
+    if ($documentPosition >= 200 && !$btnIsDisplayed) {
       $(".scroll-up").fadeIn();
       return;
     }
-  });
-});
+  }
+})(jQuery);
