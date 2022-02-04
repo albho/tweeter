@@ -6,7 +6,8 @@
   padding: 1rem;
   border-radius: 50%;
   background: #ff0000;
-  color: #e0e0df;
+  color: #fff;
+  border: 3px solid #545149;
 }
 
 .scroll-up:hover {
