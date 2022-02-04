@@ -5,16 +5,16 @@ nav {
   width: 100vw;
   background-color: transparent;
   color: $secondary-light;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   position: fixed;
   z-index: 1;
-  min-width: 480px;
+  min-width: 320px;
 
   .logo {
     font-family: $secondary-font;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     align-self: center;
     text-shadow: 2px 2px #111;
   }
@@ -23,19 +23,20 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
 
-  p {
-    margin: 0.8rem 0 0;
-    text-shadow: 2px 2px #111;
-    b {
-      font-weight: 600;
+    p {
+      margin: 0.8rem 0 0;
+      text-shadow: 2px 2px #111;
+
+      b {
+        font-weight: 600;
+      }
     }
-  }
 
-  div div {
-    position: relative;
-    margin-top: 0.8rem;
+    div {
+      position: relative;
+      margin-top: 0.8rem;
+    }
   }
 
   button {
@@ -62,6 +63,16 @@ nav {
     cursor: pointer;
 
     animation: verticalSlide 1.2s linear infinite;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    padding: 0 2rem;
+
+    .logo {
+      font-size: 1.6rem;
+    }
   }
 }
 
