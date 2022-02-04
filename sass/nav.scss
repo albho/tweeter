@@ -9,7 +9,7 @@ nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   min-width: 320px;
 
   .logo {
