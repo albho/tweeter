@@ -28,20 +28,12 @@ Tweeter is a simple, single-page Twitter clone.
   - Basic XSS protection
 
 ## Screenshots
-### 483px - 767px
-![mobile screen] (< 482px)
 
-### tablet screen (483px - 767px)
+!["Screenshot of tweeting on a small screen"](https://github.com/albho/tweeter/blob/master/docs/small-screen.png?raw=true)
 
-![mobile or tablet](/readme_resources/imgs/desktop.png)
+!["Screenshot of collapsed tweet box on a small desktop"](https://github.com/albho/tweeter/blob/master/docs/medium-screen.png?raw=true)
 
-### 768px - 1023px small laptop or desktop screen
-
-![small desktop](/readme_resources/imgs/desktop-smaller.png)
-
-### 1023px < large screen
-
-![large screen](/readme_resources/imgs/mobile.png)
+!["Screenshot of all tweets on a large screen"](https://github.com/albho/tweeter/blob/master/docs/large-screen.png?raw=true)
 
 ## Dependencies
 
