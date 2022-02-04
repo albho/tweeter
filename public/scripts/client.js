@@ -32,7 +32,7 @@
   const createTweetElement = tweet => {
     const { user, content, created_at } = tweet;
 
-    let $tweet = `
+    let tweet = `
     <article>
       <header>
         <div class="user-info">
@@ -59,7 +59,7 @@
     </article>
   `;
 
-    return $tweet;
+    return tweet;
   };
 
   // helper function to prevent XSS attacks
@@ -74,14 +74,14 @@
     e.preventDefault();
 
     // error handling for invalid tweet lengths
-    const tweetLength = $("#tweet-text").val().length;
-    if (!tweetLength) {
+    const $tweetLength = $("#tweet-text").val().length;
+    if (!$tweetLength) {
       const errorMsg = "Tweet cannot be empty.";
       return $(".error-message").text(errorMsg).slideDown(200);
     }
 
-    if (tweetLength > 140) {
-      const errorMsg = `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`;
+    if ($tweetLength > 140) {
+      const errorMsg = `Tweet cannot exceed 140 characters. You currently have ${$tweetLength} characters.`;
       return $(".error-message").text(errorMsg).slideDown(200);
     }
 
