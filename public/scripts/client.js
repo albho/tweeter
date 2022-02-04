@@ -1,58 +1,49 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-$(() => {
-  loadTweets();
-});
-
-// get tweets from server
-const loadTweets = () => {
-  $.ajax({ method: "GET", url: "/tweets" }).then(data => {
-    renderTweets(data);
+(function ($) {
+  $(() => {
+    loadTweets();
   });
-};
 
-// $.get("/tweets").then(data => {
-//   $("#tweets-container").empty();
-//   $("#textarea").val("");
-//   renderTweets(data);
-// });
+  // get tweets from server
+  const loadTweets = () => {
+    $.get("/tweets").then(data => {
+      resetElements();
+      renderTweets(data);
+    });
+  };
 
-// append templated tweet to page
-const renderTweets = tweets => {
-  $("#tweet-text").val("");
-  $("#char-counter").text(140);
-  $("#tweets-container").empty();
-  $("form button").prop("disabled", false);
-  $("form button").text("Tweet");
+  // clear input + page, reset counter and enable button
+  const resetElements = () => {
+    $("#tweet-text").val("");
+    $("#tweets-container").empty();
+    $("#char-counter").text(140);
+    $("form button").text("Tweet").prop("disabled", false);
+  };
 
-  // render tweets
-  tweets.forEach(tweet => {
-    const newTweet = createTweetElement(tweet);
-    $("#tweets-container").prepend(newTweet);
-  });
-};
+  // append templated tweet to page
+  const renderTweets = tweets => {
+    tweets.forEach(tweet => {
+      const newTweet = createTweetElement(tweet);
+      $("#tweets-container").prepend(newTweet);
+    });
+  };
 
-// create template string with tweet obj
-const createTweetElement = tweet => {
-  const { user, content, created_at } = tweet;
+  // create template string with tweet obj
+  const createTweetElement = tweet => {
+    const { user, content, created_at } = tweet;
 
-  let $tweet = `
+    let $tweet = `
     <article>
       <header>
         <div class="user-info">
           <div>
-            <img src='${escape(user.avatars)}' alt='user avatar'>
-            <p>${escape(user.name)}</p>
+            <img src='${escapeInput(user.avatars)}' alt='user avatar'>
+            <p>${escapeInput(user.name)}</p>
           </div>
-          <p class="handle">${escape(user.handle)}</p>
+          <p class="handle">${escapeInput(user.handle)}</p>
         </div>
         <div class="content">
           <p>
-            ${escape(content.text)}
+            ${escapeInput(content.text)}
           </p>
         </div>
       </header>
@@ -67,46 +58,42 @@ const createTweetElement = tweet => {
     </article>
   `;
 
-  return $tweet;
-};
+    return $tweet;
+  };
 
-// send data to server via ajax
-$("form").submit(e => {
-  e.preventDefault();
+  // send data to server via ajax
+  $("form").submit(e => {
+    e.preventDefault();
 
-  $("#error-message").text("").slideUp(200);
-  $("form button").prop("disabled", true);
-  $("form button").text("Tweeting...");
+    // error handling
+    const tweetLength = $("#tweet-text").val().length;
+    if (!tweetLength) {
+      return renderErrMsg("Tweet cannot be empty.");
+    }
 
-  // error handling
-  const tweetLength = $("#tweet-text").val().length;
-  if (!tweetLength) {
-    return renderErrMsg("Tweet cannot be empty.");
-  }
+    if (tweetLength > 140) {
+      return renderErrMsg(
+        `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`
+      );
+    }
 
-  if (tweetLength > 140) {
-    return renderErrMsg(
-      `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`
-    );
-  }
+    // ensure error message is hidden, indicate that tweet is submitting
+    $("#error-message").text("").slideUp(200);
+    $("form button").text("Tweeting...").prop("disabled", true);
 
-  // send tweet to server
-  $.ajax({
-    method: "POST",
-    url: $("form").attr("action"),
-    data: $("form").serialize(),
-    success: () => loadTweets(),
+    // send tweet to server
+    const $data = $("form").serialize();
+    $.post("/tweets", $data).then(() => loadTweets());
   });
-  // $.post("/tweets", $("form").serialize()).then(() => loadTweets());
-});
 
-// helper function to prevent XSS
-const escape = function (str) {
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
+  // helper function to prevent XSS
+  const escapeInput = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
-const renderErrMsg = msg => {
-  $("#error-message").text(msg).slideDown(200);
-};
+  const renderErrMsg = msg => {
+    $("#error-message").text(msg).slideDown(200);
+  };
+})(jQuery);
