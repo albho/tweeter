@@ -5,59 +5,34 @@
   height: 5rem;
   width: 100%;
   position: relative;
-  background-color: #4988f5;
+  background-color: $primary-blue;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 
   div {
     display: none;
+  }
+
+  div:nth-child(1) {
+    position: absolute;
+  }
+
+  div:nth-child(2) {
+    position: relative;
+    margin-top: auto;
+    color: $secondary-dark;
+  }
+
+  div:nth-child(2) h2 {
+    margin: 1rem;
   }
 }
 
 @media only screen and (min-width: 481px) {
   .user-header {
     height: 25rem;
-    width: 100%;
-    position: relative;
-    background-color: #4988f5;
-    background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 
     div {
       display: block;
-    }
-
-    div:nth-child(1) {
-      position: absolute;
-    }
-
-    div:nth-child(2) {
-      position: relative;
-      margin-top: auto;
-    }
-
-    div:nth-child(2) h2 {
-      margin: 1rem;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .user-header {
-    width: 100%;
-    position: relative;
-    background-color: #4988f5;
-    background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
-
-    div:nth-child(1) {
-      position: absolute;
-    }
-
-    div:nth-child(2) {
-      position: relative;
-      margin-top: auto;
-    }
-
-    div:nth-child(2) h2 {
-      margin: 1rem;
     }
   }
 }
