@@ -24,15 +24,14 @@
   function onScroll() {
     const $documentPosition = $(this).scrollTop();
     const $scrollBtn = $(".scroll-up");
-    const $btnIsDisplayed =
-      $scrollBtn.css("display") === "block" ? true : false;
+    const btnIsDisplayed = $scrollBtn.css("display") === "block" ? true : false;
 
-    if ($documentPosition < 200 && $btnIsDisplayed) {
+    if ($documentPosition < 200 && btnIsDisplayed) {
       $scrollBtn.fadeOut();
       return;
     }
 
-    if ($documentPosition >= 200 && !$btnIsDisplayed) {
+    if ($documentPosition >= 200 && !btnIsDisplayed) {
       $scrollBtn.fadeIn();
       return;
     }
