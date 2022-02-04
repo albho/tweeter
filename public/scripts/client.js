@@ -71,7 +71,6 @@
   };
 
   // send data to server via ajax
-
   function onSubmit(event) {
     event.preventDefault();
 
@@ -80,7 +79,7 @@
     const errorMsg = formContainer.find(".error-message");
     const tweetLength = $form.find("#tweet-text").val().length;
 
-    // error handling for invalid tweet lengths
+    // error handling
     if (!tweetLength) {
       const msg = "Tweet cannot be empty.";
       return errorMsg.text(msg).slideDown(200);
@@ -91,8 +90,12 @@
       return errorMsg.text(msg).slideDown(200);
     }
 
-    // ensure error message is hidden, indicate that tweet is submitting
-    errorMsg.text("").slideUp(200);
+    // re-hide error message
+    if (errorMsg.css("display") === "block") {
+      errorMsg.text("").slideUp(200);
+    }
+
+    // disable tweet button and indicate that tweet is submitting
     const submitBtn = $form.find("button");
     submitBtn.text("Tweeting...").prop("disabled", true);
 
