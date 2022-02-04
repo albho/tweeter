@@ -77,16 +77,16 @@
     const $form = $(this);
     const formContainer = $form.closest(".new-tweet");
     const errorMsg = formContainer.find(".error-message");
-    const tweetLength = $form.find("#tweet-text").val().length;
+    const tweetLen = $form.find("#tweet-text").val().length;
 
     // error handling
-    if (!tweetLength) {
+    if (!tweetLen) {
       const msg = "Tweet cannot be empty.";
       return errorMsg.text(msg).slideDown(200);
     }
 
-    if (tweetLength > 140) {
-      const msg = `Tweet cannot exceed 140 characters. You currently have ${tweetLength} characters.`;
+    if (tweetLen > 140) {
+      const msg = `Tweet cannot exceed 140 characters. You currently have ${tweetLen} characters.`;
       return errorMsg.text(msg).slideDown(200);
     }
 
