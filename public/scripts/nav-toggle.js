@@ -9,18 +9,20 @@
     const $upArrow = $(".nav-toggle i.fa-angle-double-up");
     const $input = $("#tweet-text");
 
+    // show and focus text field, toggle button arrow direction
     if ($composeSection.css("display") === "none") {
-      // show and focus text field, toggle button arrow direction
       $composeSection.slideDown();
       $input.focus();
       $upArrow.css("display", "block");
       $downArrow.css("display", "none");
-    } else {
-      // hide and blur text field, toggle button arrow direction
-      $composeSection.slideUp();
-      $input.blur();
-      $downArrow.css("display", "block");
-      $upArrow.css("display", "none");
+      return;
     }
+
+    // hide and blur text field, toggle button arrow direction
+    $composeSection.slideUp();
+    $input.blur();
+    $downArrow.css("display", "block");
+    $upArrow.css("display", "none");
+    return;
   }
 })(jQuery);
