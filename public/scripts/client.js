@@ -14,8 +14,8 @@
   // clear input + page, reset counter and enable button
   const resetElements = () => {
     $("#tweet-text").val("");
-    $("#tweets-container").empty();
-    $("#char-counter").text(140);
+    $(".tweets-container").empty();
+    $(".char-counter").text(140);
     $("form button").text("Tweet").prop("disabled", false);
   };
 
@@ -23,7 +23,7 @@
   const renderTweets = tweets => {
     tweets.forEach(tweet => {
       const newTweet = createTweetElement(tweet);
-      $("#tweets-container").prepend(newTweet);
+      $(".tweets-container").prepend(newTweet);
     });
   };
 
@@ -78,7 +78,7 @@
     }
 
     // ensure error message is hidden, indicate that tweet is submitting
-    $("#error-message").text("").slideUp(200);
+    $(".error-message").text("").slideUp(200);
     $("form button").text("Tweeting...").prop("disabled", true);
 
     // send tweet to server
@@ -94,6 +94,6 @@
   };
 
   const renderErrMsg = msg => {
-    $("#error-message").text(msg).slideDown(200);
+    $(".error-message").text(msg).slideDown(200);
   };
 })(jQuery);

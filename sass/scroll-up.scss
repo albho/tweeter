@@ -1,6 +1,6 @@
 @import "./base.scss";
 
-#scroll-up {
+.scroll-up {
   position: fixed;
   display: none;
   bottom: 1rem;
@@ -11,7 +11,7 @@
   color: $primary-light;
 }
 
-#scroll-up:hover {
+.scroll-up:hover {
   cursor: pointer;
   background: $toggle-btn-hover;
 }

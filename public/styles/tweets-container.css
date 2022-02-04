@@ -1,59 +1,59 @@
-#tweets-container {
+.tweets-container {
   margin: 1rem 0 0 0;
 }
-#tweets-container article {
+.tweets-container article {
   border: 0.3rem solid #545149;
   padding: 0 1rem;
   margin: 0 0 1rem 0;
   background-color: #fff;
 }
-#tweets-container article .user-info {
+.tweets-container article .user-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 0.25rem;
 }
-#tweets-container article .user-info div {
+.tweets-container article .user-info div {
   display: flex;
   align-items: center;
 }
-#tweets-container article .user-info img {
+.tweets-container article .user-info img {
   margin-right: 1rem;
   width: 3rem;
 }
-#tweets-container article .user-info .handle {
+.tweets-container article .user-info .handle {
   font-weight: 600;
   font-size: smaller;
   color: #545149;
   opacity: 0.5;
 }
-#tweets-container article .content {
+.tweets-container article .content {
   border-bottom: 0.3rem solid #545149;
 }
-#tweets-container article .content p {
+.tweets-container article .content p {
   font-weight: 600;
   font-size: smaller;
 }
-#tweets-container article footer {
+.tweets-container article footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#tweets-container article footer p {
+.tweets-container article footer p {
   font-size: 1rem;
   font-weight: 600;
 }
-#tweets-container article footer .icons i {
+.tweets-container article footer .icons i {
   color: #4056a1;
   margin-right: 0.3rem;
 }
-#tweets-container article footer .icons i:last-child {
+.tweets-container article footer .icons i:last-child {
   margin-right: 1rem;
 }
-#tweets-container article footer .icons i:hover {
+.tweets-container article footer .icons i:hover {
   cursor: pointer;
   color: #005500;
 }
-#tweets-container article:hover {
+.tweets-container article:hover {
   box-shadow: 0.3rem 0.3rem rgba(84, 81, 73, 0.5);
 }

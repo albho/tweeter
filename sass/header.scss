@@ -1,6 +1,6 @@
 @import "./base.scss";
 
-#main-header {
+.user-header {
   @include center-children;
   height: 25rem;
   width: 100%;

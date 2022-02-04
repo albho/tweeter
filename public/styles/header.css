@@ -1,4 +1,4 @@
-#main-header {
+.user-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,13 +9,13 @@
   background-color: #4988f5;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
-#main-header div:nth-child(1) {
+.user-header div:nth-child(1) {
   position: absolute;
 }
-#main-header div:nth-child(2) {
+.user-header div:nth-child(2) {
   position: relative;
   margin-top: auto;
 }
-#main-header div:nth-child(2) h2 {
+.user-header div:nth-child(2) h2 {
   margin: 1rem;
 }

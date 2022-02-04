@@ -1,22 +1,22 @@
-#new-tweet {
+.new-tweet {
   margin: 0 2rem;
   display: none;
 }
-#new-tweet h2 {
+.new-tweet h2 {
   margin-bottom: 1.5rem;
 }
-#new-tweet #error-message {
+.new-tweet .error-message {
   background: lightpink;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   display: none;
 }
-#new-tweet form {
+.new-tweet form {
   display: flex;
   flex-direction: column;
 }
-#new-tweet form #tweet-text {
+.new-tweet form #tweet-text {
   background-color: inherit;
   border: none;
   outline: none;
@@ -24,14 +24,14 @@
   padding: 0.5rem;
   font-weight: 600;
 }
-#new-tweet form div {
+.new-tweet form div {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0.5rem 0 0;
   font-family: "Bungee", cursive;
   font-size: smaller;
 }
-#new-tweet form div button {
+.new-tweet form div button {
   background-color: #4056a1;
   font-size: smaller;
   color: #e0e0df;
@@ -39,7 +39,7 @@
   padding: 0.3rem 0.6rem;
   border-radius: 0.2rem;
 }
-#new-tweet form div button:hover {
+.new-tweet form div button:hover {
   cursor: pointer;
   background-color: #4056a1;
 }

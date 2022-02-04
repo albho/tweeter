@@ -11,7 +11,7 @@
     const textColor = counterText >= 0 ? "inherit" : "red";
 
     const $form = $input.closest("form");
-    const $counter = $form.find("#char-counter");
+    const $counter = $form.find(".char-counter");
 
     $counter.text(counterText).css("color", textColor);
   }

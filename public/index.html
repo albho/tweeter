@@ -56,15 +56,15 @@
       <div>
         <p><b>Write</b> a new tweet</p>
         <div>
-          <button>
+          <button class="nav-toggle">
             <i class="fas fa-angle-double-down fa-sm"></i>
             <i class="fas fa-angle-double-up fa-sm"></i>
           </button>
         </div>
       </div>
     </nav>
-    <div id="page-container">
-      <header id="main-header">
+    <div class="page-container">
+      <header class="user-header">
         <div>
           <img src="/images/profile-hex.png" />
         </div>
@@ -74,10 +74,10 @@
       </header>
 
       <!-- Page-specific (main) content here -->
-      <main id="main-container">
-        <section id="new-tweet">
+      <main class="main-container">
+        <section class="new-tweet">
           <h2>Compose Tweet</h2>
-          <div id="error-message"></div>
+          <div class="error-message"></div>
           <form action="/tweets" method="POST">
             <textarea
               name="text"
@@ -87,14 +87,14 @@
             ></textarea>
             <div>
               <button type="submit">Tweet</button>
-              <output name="counter" id="char-counter" for="tweet-text"
+              <output name="counter" class="char-counter" for="tweet-text"
                 >140</output
               >
             </div>
           </form>
         </section>
-        <section id="tweets-container"></section>
-        <button id="scroll-up">
+        <section class="tweets-container"></section>
+        <button class="scroll-up">
           <i class="fas fa-angle-double-up fa-xl"></i>
         </button>
       </main>

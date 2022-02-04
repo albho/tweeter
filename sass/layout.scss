@@ -34,12 +34,12 @@ body {
   min-width: 480px;
 }
 
-#page-container {
+.page-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-#main-container {
+.main-container {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
@@ -50,26 +50,26 @@ body {
     background-color: $primary-blue;
   }
 
-  #page-container {
+  .page-container {
     display: flex;
     padding: 1rem;
   }
 
-  #main-header {
+  .user-header {
     margin: 6rem 1rem 0 0;
   }
 
-  #main-container {
+  .main-container {
     margin-top: 5rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  #main-header {
+  .user-header {
     width: 500px;
   }
 
-  #tweets-container {
+  .tweets-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
