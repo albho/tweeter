@@ -10,8 +10,9 @@ nav {
   z-index: 1;
   min-width: 480px;
 }
-nav #logo {
+nav .logo {
   font-family: "Bungee", cursive;
+  font-size: 1.6rem;
   align-self: center;
   text-shadow: 2px 2px #111;
 }

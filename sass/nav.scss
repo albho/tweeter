@@ -12,8 +12,9 @@ nav {
   z-index: 1;
   min-width: 480px;
 
-  #logo {
+  .logo {
     font-family: $secondary-font;
+    font-size: 1.6rem;
     align-self: center;
     text-shadow: 2px 2px #111;
   }
